@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-CRAFTEL | Custom PC Build Service ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+```
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: #fff;
+        overflow-x: hidden;
+        background: #0a0a0a;
+    }
+
+    header {
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 1.5rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid rgba(0, 242, 254, 0.3);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #ff00ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 3px;
+        text-shadow: 0 0 30px rgba(0, 242, 254, 0.5);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #00f2fe, #ff00ff);
+        transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 2rem 80px;
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.1) 0%, rgba(10, 10, 10, 1) 70%);
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: 
+            repeating-linear-gradient(0deg, rgba(0, 242, 254, 0.05) 0px, transparent 2px, transparent 40px, rgba(0, 242, 254, 0.05) 42px),
+            repeating-linear-gradient(90deg, rgba(0, 242, 254, 0.05) 0px, transparent 2px, transparent 40px, rgba(0, 242, 254, 0.05) 42px);
+        animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(40px, 40px); }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #ff00ff 70%, #ff6b9d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: fadeInUp 1s ease;
+        text-shadow: 0 0 80px rgba(0, 242, 254, 0.5);
+    }
+
+    .glitch {
+        position: relative;
+        animation: glitch 3s infinite;
+    }
+
+    @keyframes glitch {
+        0%, 100% { transform: translate(0); }
+        33% { transform: translate(-2px, 2px); }
+        66% { transform: translate(2px, -2px); }
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease 0.2s both;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    .emoji-large {
+        font-size: 3rem;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+        margin: 2rem 0;
+        opacity: 0.8;
+        animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .price-badge {
+        display: inline-block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding: 1.5rem 3rem;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.2) 0%, rgba(255, 0, 255, 0.2) 100%);
+        border: 2px solid;
+        border-image: linear-gradient(135deg, #00f2fe, #ff00ff) 1;
+        border-radius: 20px;
+        margin: 2rem 0;
+        animation: fadeInUp 1s ease 0.6s both, pulse 2s ease-in-out infinite;
+        box-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 1.5rem 4rem;
+        background: linear-gradient(135deg, #00f2fe 0%, #ff00ff 100%);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.3rem;
+        transition: all 0.3s;
+        animation: fadeInUp 1s ease 0.8s both;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 242, 254, 0.4);
+    }
+
+    .cta-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .cta-button:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 50px rgba(255, 0, 255, 0.6);
+    }
+
+    section {
+        padding: 100px 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #00f2fe 0%, #ff00ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .features {
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a0a1a 100%);
+        position: relative;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        padding: 3rem;
+        border-radius: 25px;
+        border: 1px solid rgba(0, 242, 254, 0.2);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    .feature-card:hover::before {
+        opacity: 1;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        border-color: rgba(255, 0, 255, 0.5);
+        box-shadow: 0 20px 60px rgba(0, 242, 254, 0.3);
+    }
+
+    .feature-icon {
+        font-size: 4.5rem;
+        margin-bottom: 1.5rem;
+        filter: drop-shadow(0 0 20px rgba(0, 242, 254, 0.6));
+        animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .feature-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #00f2fe;
+        font-weight: 700;
+    }
+
+    .feature-card p {
+        opacity: 0.8;
+        line-height: 1.8;
+        font-size: 1.1rem;
+    }
+
+    .services {
+        background: #0a0a0a;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+        padding: 3rem 2rem;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        position: relative;
+        transition: all 0.3s;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        padding: 2px;
+        background: linear-gradient(135deg, #00f2fe, #ff00ff);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 242, 254, 0.3);
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .beginner-badge {
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 140, 0, 0.2) 100%);
+        border: 2px solid rgba(255, 215, 0, 0.5);
+        padding: 3rem;
+        border-radius: 25px;
+        margin: 4rem auto;
+        max-width: 900px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
+    }
+
+    .beginner-badge h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ffd700;
+    }
+
+    .about {
+        background: linear-gradient(180deg, #1a0a1a 0%, #0a0a0a 100%);
+    }
+
+    .about-content {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        line-height: 2;
+        opacity: 0.9;
+    }
+
+    .experience-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #00f2fe 0%, #ff00ff 100%);
+        padding: 1.5rem 3rem;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        box-shadow: 0 10px 40px rgba(0, 242, 254, 0.4);
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .contact {
+        background: radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.15) 0%, #0a0a0a 70%);
+        padding: 120px 2rem;
+    }
+
+    .contact h2 {
+        margin-bottom: 3rem;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        padding: 2.5rem;
+        border-radius: 20px;
+        border: 2px solid rgba(0, 242, 254, 0.3);
+        text-align: center;
+        transition: all 0.3s;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(255, 0, 255, 0.5);
+        box-shadow: 0 20px 50px rgba(0, 242, 254, 0.3);
+    }
+
+    .contact-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #00f2fe;
+    }
+
+    .contact-card a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        word-break: break-all;
+        transition: color 0.3s;
+    }
+
+    .contact-card a:hover {
+        color: #00f2fe;
+    }
+
+    .cta-contact {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    footer {
+        background: #000;
+        text-align: center;
+        padding: 3rem 2rem;
+        border-top: 2px solid rgba(0, 242, 254, 0.3);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        .price-badge {
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IT-CRAFTEL</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+```
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1 class="glitch">IT-CRAFTEL</h1>
+        <div class="subtitle">CUSTOM PC BUILD SERVICE <span class="emoji-large">🖥️</span></div>
+        <p class="tagline">From Parts Selection to Build - Complete Support!</p>
+        <div class="price-badge">💰 $900 - $2,700</div>
+        <a href="https://lin.ee/m85RlAE" class="cta-button" target="_blank">GET STARTED NOW ✨</a>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <h2>WHY CHOOSE US</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🔰</div>
+            <h3>Beginner Friendly</h3>
+            <p>First time building a PC? No worries! We'll guide you through every step with care and expertise.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3>Complete Support</h3>
+            <p>From selecting the perfect parts to final assembly and testing - we handle everything for you.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <h3>Nationwide Shipping</h3>
+            <p>Secure packaging and delivery to anywhere in the country. Your dream PC comes to you!</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚗</div>
+            <h3>On-Site Service</h3>
+            <p>Need hands-on help? We offer on-site assembly and installation at your location.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3>Warranty Included</h3>
+            <p>All parts come with manufacturer warranty. Build with confidence and peace of mind.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>After-Sales Support</h3>
+            <p>Questions after your build? Reach out anytime via DM - we're here to help!</p>
+        </div>
+    </div>
+
+    <div class="beginner-badge">
+        <h3>🔰 PERFECT FOR BEGINNERS</h3>
+        <p>4 years of PC building experience - trusted by first-timers and enthusiasts alike</p>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>OUR SERVICES</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>🖥️ DESKTOP PC</h3>
+            <p>Gaming rigs to workstations - fully customized to your needs</p>
+        </div>
+        <div class="service-card">
+            <h3>💻 LAPTOP CUSTOM</h3>
+            <p>Laptop upgrades and customization services available</p>
+        </div>
+        <div class="service-card">
+            <h3>🎯 PARTS CONSULTATION</h3>
+            <p>Expert advice on the best components for your budget and goals</p>
+        </div>
+        <div class="service-card">
+            <h3>🔧 BUILD SERVICE</h3>
+            <p>Professional assembly with meticulous attention to detail</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>ABOUT IT-CRAFTEL</h2>
+    <div class="about-content">
+        <p>
+            IT-CRAFTEL is your trusted BTO (Build To Order) PC service, bringing the joy of custom-built computers to everyone.
+        </p>
+        <p>
+            With budgets ranging from $900 to $2,700, we create the perfect machine for your needs - whether it's for gaming, content creation, or professional work.
+        </p>
+        <div class="experience-badge">
+            ⭐ 4 YEARS BUILDING EXPERIENCE
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>GET IN TOUCH</h2>
+    <div class="contact-grid">
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h3>EMAIL</h3>
+            <a href="mailto:number13487@gmail.com">number13487@gmail.com</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>PHONE</h3>
+            <a href="tel:07013863146">070-1386-3146</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>LINE</h3>
+            <a href="https://lin.ee/m85RlAE" target="_blank">Chat with us!</a>
+        </div>
+    </div>
+
+    <div class="cta-contact">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9;">
+            From consultation to after-sales support - we're here for you every step of the way!
+        </p>
+        <a href="https://lin.ee/m85RlAE" class="cta-button" target="_blank">MESSAGE US NOW 🚀</a>
+    </div>
+</section>
+
+<footer>
+    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">&copy; 2025 IT-CRAFTEL. All rights reserved.</p>
+    <p style="opacity: 0.7;">Custom PC Build Service | BTO Specialist</p>
+</footer>
+```
+
+</body>
+</html>
